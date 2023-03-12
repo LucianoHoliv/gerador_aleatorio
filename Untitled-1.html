@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Gerador de Nomes Aleatórios</title>
+  <style>
+    /* estilo para centralizar e espaçar os elementos */
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    label,
+    input {}
+
+    input {
+      margin-bottom: 1rem;
+      max-width: 50px;
+    }
+
+    label~input {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Gerar Fatias Aleatóriamente</h1>
+  <form>
+    <label for="num-campos">Quantos Fatias deseja adicionar?</label>
+    <input type="number" id="num-campos" name="num-campos" min="1" max="14" required>
+    <button type="button" onclick="adicionarCampos()">Adicionar campos</button>
+  </form>
+  <div id="campos"></div>
+  <button type="button" onclick="gerarNomes()">Gerar Nomes</button>
+  <table id="tabela-resultados"></table>
+  <script src="script.js"></script>
+</body>
+
+</html>
